@@ -1,0 +1,38 @@
+
+.heading__primary {
+    font-family: $font-primary;
+    font-weight: 300;
+    font-size: 7rem;
+    color: $color-primary;
+}
+
+.heading__secondary {
+    font-family: $font-primary;
+    font-weight: 400;
+
+    &--main {
+        font-size: 4rem;
+        color: $color-primary;
+    }
+
+    &--sub {
+        font-size: 3rem;
+        color: $color-primary;
+    }
+
+    &--light {
+        color: $color-white
+    }
+}
+
+.heading__tertiary {
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-primary;
+    font-size: 2rem;
+
+    &--light {
+        color: $color-white;
+    }
+}
+

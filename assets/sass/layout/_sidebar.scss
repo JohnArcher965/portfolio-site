@@ -1,0 +1,67 @@
+.sidebar {
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / span 5;
+    background-color: $color-primary;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+        grid-column: full-start / full-end;
+        grid-row: 1 / span 1;
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+        z-index: 1500;
+        padding-bottom: 9rem;
+        justify-content: flex-end;
+    }
+
+    &__social-media {
+        position: sticky;
+        bottom: 0;
+        margin-left: 2.5rem;
+        
+        ul {
+            list-style: none;
+
+            
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+        
+
+        svg {
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
+            position: relative;
+            height: 8rem;
+            
+
+            ul {
+                display: flex;
+                margin-top: 2.5rem;
+                margin-right: 2rem;
+            }
+
+            li {
+                padding-left: 1rem;
+
+            }
+
+
+            svg {
+                width: 4rem;
+            }
+                
+        }
+
+    }
+}

@@ -1,0 +1,82 @@
+.skills {
+    padding-bottom: 5rem;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: [skills-start] minmax(8rem, 1fr) [skillsCenter-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [skillsCenter-end] minmax(8rem, 1fr) [skills-end];
+    grid-template-rows: min-content;
+    row-gap: 4rem;
+
+    &__heading {
+        grid-column: skills-start / skills-end;
+
+        @include respond(tab-port) {
+            padding-top: 8rem;
+        }
+    }
+
+    &__icons {
+        grid-column: skills-start / skills-end;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 3rem;
+        text-align: center;
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include respond(phone) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__icon {
+        height: 6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__working-on {
+        grid-column: skills-start / skills-end;
+
+        @include respond(tab-port) {
+            grid-column: skills-start / skills-end;
+        }
+
+        &--subheading {
+            font-size: 2rem;
+            color: $color-primary;
+        }
+
+        &--text {
+            font-size: 1.6rem;
+            color: $color-primary;
+
+            @include respond(phone) {
+            font-size: 1.8rem;
+        }
+        }
+    }
+
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-family: $font-display;
+        font-weight: 300;
+        margin-bottom: .7rem;
+    }
+
+    &__text {
+        display: none;
+        width: 75%;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
